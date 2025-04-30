@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-areas</title>
+</head>
+<style>
+    nav{
+        width: 100%;
+        height: 50px;
+        background-color: gray;
+        margin: 20px 0px;
+        a{
+            background-color: whitesmoke;
+            padding: 10px;
+            margin: 10px;
+        }
+    }
+    .grid-container{
+    width: 100%;
+    height: 700px;
+    background-color: brown;
+    /*Modulo grid*/
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav    nav     nav"
+    "main   main    aside"
+    "footer footer footer";
+    gap: 20px 30px;
+}
+.item1{
+    grid-area: header;
+    background-color: blue;
+}
+.item2{
+    grid-area: nav;
+    background-color: crimson;
+}
+.item3{
+    grid-area: main;
+    background-color: green;
+}
+.item4{
+    grid-area: aside;
+    background-color: goldenrod;
+}
+.item5{
+    grid-area: footer;
+    background-color: gray;
+}
+@media screen and (max-width: 720px) {
+    .grid-container{
+        /*Modulo grid*/
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+        gap: 20px 30px;
+    }
+}
+</style>
+<nav>
+    <a href="./index2.html">Grid-Column-Rows</a>
+</nav>
+<body>
+    <section class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>
+        <div class="grid-item item4">4</div>
+        <div class="grid-item item5">5</div>
+    </section>
+</body>
+</html>
